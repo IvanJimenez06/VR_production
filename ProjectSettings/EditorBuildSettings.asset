@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Flooded_Grounds/Scenes/Scene_A.unity
+    guid: c0d944ca9defd20449bc336e50d75a08
+  - enabled: 1
+    path: Assets/Scenes/Jueguito.unity
+    guid: f60ff80b036115547a02e18343f98b04
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 51fab6a8858c10e41a29d3d394b5e66e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d7ec7f974f3514d48a0d078ce8fe644c, type: 2}
