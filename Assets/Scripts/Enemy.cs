@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     public Transform target;
     public float distance;
 
-    private void Awake()
+    public void Awake()
     {
         if(authomaticTargetSelection)
             target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
             default:
                 break;
         }
-        state = 0;
+        state = e;
     }
 
     public virtual void IdleState()
@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour
         {
             ChangeState(States.attack);
         }
-        else if (distance < escapeDistance)
+        else if (distance > escapeDistance)
         {
             ChangeState(States.idle);
         }
