@@ -37,9 +37,19 @@ public class MissionManager : MonoBehaviour
             {
                 missionTexts[i].text = ""; // Limpia si hay menos misiones
                 Mcompletada.SetActive(true);
+                HideMision();
             }
         }
     }
+
+
+    IEnumerator HideMision()
+    {
+        Mcompletada.SetActive(false);
+        yield return new WaitForSeconds(3);
+
+    }
+
 
     public void CompleteMission(int missionIndex)
     {
