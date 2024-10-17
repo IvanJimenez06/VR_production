@@ -13,6 +13,8 @@ public class MissionManager : MonoBehaviour
         "visita el invernadero"
     };
 
+    public GameObject Mcompletada;
+
     private bool[] missionCompleted; // Estado de las misiones
 
 
@@ -20,6 +22,7 @@ public class MissionManager : MonoBehaviour
     {
         missionCompleted = new bool[missions.Length];
         DisplayMissions();
+        Mcompletada.SetActive(false);
     }
 
     void DisplayMissions()
@@ -33,6 +36,7 @@ public class MissionManager : MonoBehaviour
             else
             {
                 missionTexts[i].text = ""; // Limpia si hay menos misiones
+                Mcompletada.SetActive(true);
             }
         }
     }
