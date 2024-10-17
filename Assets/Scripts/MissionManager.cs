@@ -35,18 +35,45 @@ public class MissionManager : MonoBehaviour
             }
             else
             {
-                missionTexts[i].text = ""; // Limpia si hay menos misiones
-                Mcompletada.SetActive(true);
-                HideMision();
+                
             }
         }
+
+        if (missionCompleted[0]) 
+        {
+            Mcompletada.SetActive(true);
+            missionTexts[0].text = ""; // Limpia si hay menos misiones
+            StartCoroutine(HideMision());
+        }
+        else if (missionCompleted[1])
+        {
+            Mcompletada.SetActive(true);
+            missionTexts[1].text = ""; // Limpia si hay menos misiones
+            StartCoroutine(HideMision());
+        }
+        else if (missionCompleted[2])
+        {
+            Mcompletada.SetActive(true);
+            missionTexts[2].text = ""; // Limpia si hay menos misiones
+            StartCoroutine(HideMision());
+        }
+        else if (missionCompleted[3])
+        {
+            Mcompletada.SetActive(true);
+            missionTexts[3].text = ""; // Limpia si hay menos misiones
+            StartCoroutine(HideMision());
+        }
+
+        //Mcompletada.SetActive(true);
+        //missionTexts[0].text = ""; // Limpia si hay menos misiones
+        
     }
 
 
     IEnumerator HideMision()
     {
-        Mcompletada.SetActive(false);
         yield return new WaitForSeconds(3);
+        Mcompletada.SetActive(false);
 
     }
 

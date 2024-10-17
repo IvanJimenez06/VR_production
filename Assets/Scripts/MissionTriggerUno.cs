@@ -8,9 +8,11 @@ public class MissionTriggerUno : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Player")) // Asegúrate de que el jugador tenga la etiqueta "Player"
         {
             missionManager.CompleteMission(0); // Completa la misión 1 al entrar en el trigger
+            gameObject.SetActive(false);
         }
     }
 }
